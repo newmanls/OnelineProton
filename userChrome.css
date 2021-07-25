@@ -1,0 +1,139 @@
+/*=============================================================================*
+ *                               ONELINE PROTON                                *
+ *                                                                             *
+ * description    : An oneline userChrome.css theme for Firefox, which aims to *
+ *                  keep the Proton experience.                                *
+ * compatibility  : Firefox 89+                                                *
+ * repository     : https://github.com/lr-tech/OnelineProton/                  *
+ *                                                                             *
+ * THANKS FOR USING MY USERCHROME! <3                                          *
+ *============================================================================*/
+
+
+/* S E T T I N G S */
+
+:root {
+  --navbarWidth     : 400px; /* Set width of navbar. Use px or vw. */
+  --animationSpeed  : 0.15s;
+}
+
+
+/* H I D I N G   E L E M E N T S */
+/* Comment or uncomment depending of what elements you want to hide */
+
+/* Back button */
+/* #back-button {display: none !important} */
+
+/* Hide back button only when disabled */
+#back-button[disabled="true"] {display: none !important}
+
+/* Forward button */
+/* #forward-button {display: none !important} */
+
+/* Hide forward button only when disabled */
+#forward-button[disabled="true"] {display: none !important}
+
+/* "Shield" icon */
+#tracking-protection-icon-container {display: none !important}
+
+/* Site information button */
+#identity-box {display: none !important}
+
+/* This is the "Search with" indicator on the urlbar */
+/* #urlbar-search-mode-indicator {display: none !important} */
+
+/* Zoom button */
+/* #urlbar-zoom-button {display: none !important} */
+
+/* Page action (right three dash button) */
+/* #pageActionButton {display: none !important} */
+
+/* These are the buttons on the right of the urlbar */
+/* #page-action-buttons {display: none !important} */
+
+/* #urlbar-label-box {display: none !important} */
+
+/* This one is the hamburger menu! */
+/* CAUTION: if you hide this some popups may be bugged */
+/* #PanelUI-button {display: none !important} */
+
+/* Tab close button */
+/* .tab-close-button {display: none !important} */
+
+
+/*============================================================================*/
+
+
+/* Oneline tweak */
+
+#TabsToolbar {
+  margin-left   : var(--navbarWidth) !important;
+}
+
+#nav-bar {
+  margin-right  : calc(100vw - var(--navbarWidth)) !important;
+  background    : transparent !important;
+  box-shadow    : none !important;
+}
+
+#urlbar-container {
+  min-width   : 0px !important;
+}
+
+:root[uidensity="compact"] #nav-bar {
+  margin-top  : -37px !important;
+  height      : 37px !important;
+}
+
+:root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
+  margin-top  : -44px !important;
+  height      : 44px !important;
+}
+
+:root[uidensity="touch"] #nav-bar {
+  margin-top  : -49px !important;
+  height      : 49px !important;
+}
+
+#urlbar:not([breakout][breakout-extend]) > #urlbar-background {
+  border      : none !important;
+  animation  : 0.15s !important;
+}
+
+
+/* Hide urlbar elements when not active */
+
+.urlbar-icon, #userContext-indicator, #userContext-label {
+  fill              : transparent !important;
+  background-color  : transparent !important;
+  color             : transparent !important;
+  animation        : var(--animationSpeed) !important;
+}
+
+#urlbar:hover .urlbar-icon,
+#urlbar:active .urlbar-icon, 
+#urlbar[focused] .urlbar-icon {
+  fill        : var(--toolbar-color) !important;
+}
+
+
+/* animations */
+toolbarbutton,
+.toolbarbutton-icon,
+.subviewbutton,
+.urlbar-input-box, 
+#identity-box,
+#tracking-protection-icon-container,
+[anonid=urlbar-go-button],
+.urlbar-icon-wrapper,
+#tracking-protection-icon,
+#identity-box image,
+stack,
+vbox,
+tab:not(:active) .tab-background,
+tab:not([beforeselected-visible])::after,
+tab[visuallyselected] .tab-background::before,
+tab[visuallyselected] .tab-background::before,
+.tab-close-button {
+  animation        : var(--animationSpeed) !important;
+}
