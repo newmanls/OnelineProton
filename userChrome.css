@@ -13,7 +13,7 @@
 /* S E T T I N G S */
 
 :root {
-  --navbarWidth     : 400px; /* Set width of navbar. Use px or vw. */
+  --navbarWidth     : 360px; /* Set width of navbar. Use px or vw. */
   --animationSpeed  : 0.15s;
 }
 
@@ -22,43 +22,43 @@
 /* Comment or uncomment depending of what elements you want to hide */
 
 /* Back button */
-/* #back-button {display: none !important} */
+/* #back-button { display: none !important } */
 
 /* Hide back button only when disabled */
-#back-button[disabled="true"] {display: none !important}
+#back-button[disabled="true"] { display: none !important }
 
 /* Forward button */
-/* #forward-button {display: none !important} */
+/* #forward-button { display: none !important } */
 
 /* Hide forward button only when disabled */
-#forward-button[disabled="true"] {display: none !important}
+#forward-button[disabled="true"] { display: none !important }
 
 /* "Shield" icon */
-#tracking-protection-icon-container {display: none !important}
+#tracking-protection-icon-container { display: none !important }
 
 /* Site information button */
-#identity-box {display: none !important}
+#identity-box { display: none !important }
 
 /* This is the "Search with" indicator on the urlbar */
-/* #urlbar-search-mode-indicator {display: none !important} */
+/* #urlbar-search-mode-indicator { display: none !important } */
 
 /* Zoom button */
-/* #urlbar-zoom-button {display: none !important} */
+/* #urlbar-zoom-button { display: none !important } */
 
 /* Page action (right three dash button) */
-/* #pageActionButton {display: none !important} */
+/* #pageActionButton { display: none !important } */
 
 /* These are the buttons on the right of the urlbar */
-/* #page-action-buttons {display: none !important} */
+/* #page-action-buttons { display: none !important } */
 
-/* #urlbar-label-box {display: none !important} */
+/* #urlbar-label-box { display: none !important } */
 
 /* This one is the hamburger menu! */
 /* CAUTION: if you hide this some popups may be bugged */
-/* #PanelUI-button {display: none !important} */
+/* #PanelUI-button { display: none !important } */
 
 /* Tab close button */
-/* .tab-close-button {display: none !important} */
+/* .tab-close-button { display: none !important } */
 
 
 /*============================================================================*/
@@ -68,6 +68,10 @@
 
 #TabsToolbar {
   margin-left   : var(--navbarWidth) !important;
+}
+
+.titlebar-spacer {
+  display       : none !important;
 }
 
 #nav-bar {
