@@ -99,12 +99,12 @@
   height      : 49px !important;
 }
 
-#urlbar:not([breakout][breakout-extend]) > #urlbar-background {
+#urlbar-background {
   border      : none !important;
-  box-shadow  : none !important;
 }
 
 #urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
+  box-shadow  : none !important;
   background  : none !important;
 }
 
@@ -128,7 +128,6 @@
 toolbarbutton,
 .toolbarbutton-icon,
 .subviewbutton,
-#urlbar,
 #urlbar-background,
 .urlbar-icon,
 #userContext-indicator,
