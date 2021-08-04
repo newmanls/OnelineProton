@@ -14,7 +14,7 @@
 
 :root {
   --navbarWidth     : 360px; /* Set width of navbar. Use px or vw. */
-  --animationSpeed  : 0.15s;
+  --animationSpeed  : 0.1s;
 }
 
 
@@ -76,7 +76,7 @@
 
 #nav-bar {
   margin-right  : calc(100vw - var(--navbarWidth)) !important;
-  background    : transparent !important;
+  background    : none !important;
   box-shadow    : none !important;
 }
 
@@ -101,17 +101,20 @@
 
 #urlbar:not([breakout][breakout-extend]) > #urlbar-background {
   border      : none !important;
-  animation  : 0.15s !important;
+  box-shadow  : none !important;
+}
+
+#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
+  background  : none !important;
 }
 
 
 /* Hide urlbar elements when not active */
 
 .urlbar-icon, #userContext-indicator, #userContext-label {
-  fill              : transparent !important;
-  background-color  : transparent !important;
-  color             : transparent !important;
-  animation        : var(--animationSpeed) !important;
+  fill        : transparent !important;
+  background  : transparent !important;
+  color       : transparent !important;
 }
 
 #urlbar:hover .urlbar-icon,
@@ -125,6 +128,11 @@
 toolbarbutton,
 .toolbarbutton-icon,
 .subviewbutton,
+#urlbar,
+#urlbar-background,
+.urlbar-icon,
+#userContext-indicator,
+#userContext-label,
 .urlbar-input-box, 
 #identity-box,
 #tracking-protection-icon-container,
@@ -139,5 +147,5 @@ tab:not([beforeselected-visible])::after,
 tab[visuallyselected] .tab-background::before,
 tab[visuallyselected] .tab-background::before,
 .tab-close-button {
-  animation        : var(--animationSpeed) !important;
+  transition    : var(--animationSpeed) !important;
 }
