@@ -13,8 +13,9 @@
 /* S E T T I N G S */
 
 :root {
-  --navbarWidth     : 360px; /* Set width of navbar. Use px or vw. */
-  --animationSpeed  : 0.1s;
+  --navbarWidth     : 360px; /* Set width of navbar. Use px for a fixed width 
+                                or vw for a percentage of your window. */
+  --animationSpeed  : 0.15s;
 }
 
 
@@ -67,17 +68,11 @@
 /* Oneline tweak */
 
 #TabsToolbar {
-  margin-left   : var(--navbarWidth) !important;
-}
-
-.titlebar-spacer {
-  display       : none !important;
+  margin-left : var(--navbarWidth) !important;
 }
 
 #nav-bar {
-  margin-right  : calc(100vw - var(--navbarWidth)) !important;
-  background    : none !important;
-  box-shadow    : none !important;
+  margin-right: calc(100vw - var(--navbarWidth)) !important;
 }
 
 #urlbar-container {
@@ -97,6 +92,22 @@
 :root[uidensity="touch"] #nav-bar {
   margin-top  : -49px !important;
   height      : 49px !important;
+}
+
+
+/* Simplifying interface */
+
+#nav-bar {
+  background  : none !important;
+  box-shadow  : none !important;
+}
+
+#navigator-toolbox {
+  border      : none !important;
+}
+
+.titlebar-spacer {
+  display     : none !important;
 }
 
 #urlbar-background {
@@ -146,5 +157,5 @@ tab:not([beforeselected-visible])::after,
 tab[visuallyselected] .tab-background::before,
 tab[visuallyselected] .tab-background::before,
 .tab-close-button {
-  transition    : var(--animationSpeed) !important;
+  transition  : var(--animationSpeed) !important;
 }
