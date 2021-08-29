@@ -61,6 +61,8 @@
 /* Tab close button */
 /* .tab-close-button { display: none !important } */
 
+/* Enable this to show the tab close button when hovering the tab */
+/* .tabbrowser-tab:hover .tab-close-button { display: -moz-inline-box !important } */
 
 /*============================================================================*/
 
