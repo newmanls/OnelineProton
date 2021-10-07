@@ -97,6 +97,16 @@
 }
 
 
+/* Dragging space */
+:root[sizemode="maximized"] #TabsToolbar {
+  margin-top: 1px;
+}
+
+#TabsToolbar {
+  margin-top: 5px;
+}
+
+
 /* Simplifying interface */
 
 #nav-bar {
